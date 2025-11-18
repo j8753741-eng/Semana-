@@ -1,0 +1,203 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartas de la semana — Para Valeria Isabel Petro Villazón </title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050406;
+      --neon:#9b59ff;
+      --neon-2:#6a00ff;
+      --glass: rgba(255,255,255,0.04);
+      --card-w:320px;
+      --accent-glow: 0 0 18px rgba(155,89,255,0.18), 0 0 40px rgba(106,0,255,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Montserrat,system-ui,Arial;background:linear-gradient(180deg,#040305 0%, #07060a 60%);} 
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(var(--card-w),1fr));gap:28px;max-width:1200px;width:100%}.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:18px;padding:18px;border:1px solid rgba(155,89,255,0.12);backdrop-filter:blur(6px);
+  box-shadow: var(--accent-glow), 0 5px 30px rgba(0,0,0,0.6);position:relative;overflow:hidden;
+  color:#e9e7fb;
+}
+
+.neon-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.sticker{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;background:linear-gradient(135deg,var(--neon),var(--neon-2));box-shadow:0 6px 30px rgba(106,0,255,0.18);transform:rotate(-6deg)}
+.day{font-weight:800;font-size:18px;letter-spacing:0.6px;text-transform:uppercase}
+.subtitle{font-size:12px;opacity:0.85}
+
+.message{font-size:15px;line-height:1.5;margin:8px 0 14px;color:#efeaff}
+.signature{margin-top:12px;font-weight:600;color:var(--neon)}
+
+.actions{display:flex;gap:10px}
+.btn{padding:8px 12px;border-radius:10px;border:1px solid rgba(155,89,255,0.16);background:transparent;color:var(--neon);cursor:pointer;font-weight:600}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--accent-glow)}
+
+.surprise{margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(155,89,255,0.04), rgba(106,0,255,0.02));border:1px solid rgba(155,89,255,0.06);display:none}
+
+/* small neon underline effect */
+.underline{height:6px;border-radius:6px;background:linear-gradient(90deg, transparent, var(--neon) 30%, var(--neon-2));opacity:0.18;margin-top:10px}
+
+/* header */
+header{position:fixed;left:18px;top:18px;color:#dcd6ff}
+header h1{margin:0;font-size:14px;font-weight:800;letter-spacing:0.6px}
+header p{margin:2px 0 0;font-size:12px;opacity:0.7}
+
+/* responsive tweaks */
+@media (max-width:520px){:root{--card-w:280px}.card{padding:14px}.sticker{width:48px;height:48px}}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav-days" style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+      <button class="btn" onclick="showDay('card-lunes')">Lunes</button>
+      <button class="btn" onclick="showDay('card-martes')">Martes</button>
+      <button class="btn" onclick="showDay('card-miercoles')">Miércoles</button>
+      <button class="btn" onclick="showDay('card-jueves')">Jueves</button>
+      <button class="btn" onclick="showDay('card-viernes')">Viernes</button>
+    </nav>
+    <h1>Cartas de la semana</h1>
+    <p>Para: Valeria Isabel — De: Juan</p>
+  </header>  <div class="wrap">
+    <div class="grid" style="grid-template-columns:1fr !important; max-width:500px;">
+      <style>.daycard{display:none;} .daycard.active{display:block;}</style><!-- Lunes -->
+  <article class="card daycard active" id="card-lunes">
+    <div class="neon-header">
+      <div class="sticker">🌅</div>
+      <div>
+        <div class="day">Lunes — Suave como un amanecer</div>
+        <div class="subtitle">Tranquilidad y ternura</div>
+      </div>
+    </div>
+    <div class="message">Amor mío, hoy amanecí con esa sensación bonita que solo tú me provocas, como si el día empezara más suave porque sé que existes. Eres mi calma, mi ternura y mi forma favorita de iniciar la semana.</div>
+    <div class="underline"></div>
+    <div class="signature">Con todo mi cariño, Juan</div>
+    <div class="actions">
+      <button class="btn" onclick="toggleSurprise('sorpresa-lunes')">Sorpresa</button>
+      <button class="btn" onclick="downloadCard('card-lunes','Lunes_Suave')">Descargar</button>
+    </div>
+    <div class="surprise" id="sorpresa-lunes">P.D. Cada amanecer me recuerda a ti mi princesa hermosa. 💫</div>
+  </article>
+
+  <!-- Martes -->
+  <article class="card daycard" id="card-martes">
+    <div class="neon-header">
+      <div class="sticker">🔥</div>
+      <div>
+        <div class="day">Martes — Pasión que no se apaga</div>
+        <div class="subtitle">Deseo y conexión</div>
+      </div>
+    </div>
+    <div class="message">Valeria, no dejo de pensar en lo mucho que me atraes. Cada mirada tuya, cada risa… me encienden algo profundo. Me tienes completamente enamorado y atrapado entre dulzura y fuego.</div>
+    <div class="underline"></div>
+    <div class="signature">Tuyo, Juan</div>
+    <div class="actions">
+      <button class="btn" onclick="toggleSurprise('sorpresa-martes')">Sorpresa</button>
+      <button class="btn" onclick="downloadCard('card-martes','Martes_Pasion')">Descargar</button>
+    </div>
+    <div class="surprise" id="sorpresa-martes">P.D. Esta noche quiero perderme en tu risa aunque sea en mis sueños. 🔥</div>
+  </article>
+
+  <!-- Miércoles -->
+  <article class="card daycard" id="card-miercoles">
+    <div class="neon-header">
+      <div class="sticker">🌙</div>
+      <div>
+        <div class="day">Miércoles — Nuestro propio universo</div>
+        <div class="subtitle">Fantasía romántica</div>
+      </div>
+    </div>
+    <div class="message">Mi niña hermosa, a veces siento que nosotros dos vivimos en un universo aparte, donde cada momento contigo es como una pequeña historia mágica. Gracias por hacer mi vida un lugar más bonito.</div>
+    <div class="underline"></div>
+    <div class="signature">Con estrellas, Juan</div>
+    <div class="actions">
+      <button class="btn" onclick="toggleSurprise('sorpresa-miercoles')">Sorpresa</button>
+      <button class="btn" onclick="downloadCard('card-miercoles','Miercoles_Universo')">Descargar</button>
+    </div>
+    <div class="surprise" id="sorpresa-miercoles">P.D. En mis sueños siempre te llevo de la mano y en los húmedos te meto los dedos. ✨</div>
+  </article>
+
+  <!-- Jueves -->
+  <article class="card daycard" id="card-jueves">
+    <div class="neon-header">
+      <div class="sticker">🤝</div>
+      <div>
+        <div class="day">Jueves — Estoy contigo</div>
+        <div class="subtitle">Apoyo y fortaleza</div>
+      </div>
+    </div>
+    <div class="message">Mi amor, hoy quiero recordarte que no importa lo que enfrentes, yo estoy contigo. No tienes que cargar nada sola; compartimos lo bonito, lo difícil y lo que venga. Aquí estoy, contigo… siempre.</div>
+    <div class="underline"></div>
+    <div class="signature">Siempre, Juan</div>
+    <div class="actions">
+      <button class="btn" onclick="toggleSurprise('sorpresa-jueves')">Sorpresa</button>
+      <button class="btn" onclick="downloadCard('card-jueves','Jueves_Apoyo')">Descargar</button>
+    </div>
+    <div class="surprise" id="sorpresa-jueves">P.D. Toma mi mano cuando quieras y lo necesites. 🤍</div>
+  </article>
+
+  <!-- Viernes -->
+  <article class="card daycard" id="card-viernes">
+    <div class="neon-header">
+      <div class="sticker">🎉</div>
+      <div>
+        <div class="day">Viernes — Fin de semana de nosotros</div>
+        <div class="subtitle">Alegría y celebración</div>
+      </div>
+    </div>
+    <div class="message">Amorcito, llegó el viernes y quiero que este fin de semana esté lleno de risas tuyas, abrazos largos y momentos que podamos guardar como tesoros. Tu amor es el mejor inicio y final de todos mis días.</div>
+    <div class="underline"></div>
+    <div class="signature">Con todo mi amor, Juan</div>
+    <div class="actions">
+      <button class="btn" onclick="toggleSurprise('sorpresa-viernes')">Sorpresa</button>
+      <button class="btn" onclick="downloadCard('card-viernes','Viernes_FinDeSemana')">Descargar</button>
+    </div>
+    <div class="surprise" id="sorpresa-viernes">P.D. Preparé una pequeña sorpresa para el sábado. 😉</div>
+  </article>
+
+</div>
+
+  </div>  <script>
+    function toggleSurprise(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // simple card -> PNG download using HTML2Canvas style method without external libs
+    // We'll use SVG foreignObject trick for a lightweight export (works in modern browsers)
+    function downloadCard(cardId, fileName){
+      const card = document.getElementById(cardId);
+      if(!card) return;
+
+      const width = card.offsetWidth;
+      const height = card.offsetHeight;
+
+      const svg = `<?xml version="1.0" encoding="utf-8"?>\n`+
+        `<svg xmlns='http://www.w3.org/2000/svg' width='${width}' height='${height}'>`+
+        `<foreignObject width='100%' height='100%'>`+
+        `<div xmlns='http://www.w3.org/1999/xhtml' style='font-family:Montserrat, system-ui, Arial;'>${card.outerHTML}</div>`+
+        `</foreignObject></svg>`;
+
+      const blob = new Blob([svg], {type: 'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = fileName + '.svg';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+  function showDay(id){
+        document.querySelectorAll('.daycard').forEach(c=>c.classList.remove('active'));
+        const el=document.getElementById(id);
+        if(el) el.classList.add('active');
+      }
+  </script></body>
+</html>
